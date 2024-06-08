@@ -103,11 +103,11 @@ pipeline {
                               // Set the environment variable in the Jenkins pipeline
                             //   env[key] = value
                             echo "key:" + key +" => " + value
-                            if(key=="APP1_VERSION"){
+                            if(key=="APP2_VERSION"){
                                 if(value!= getNewVersion()){
                                     newEnvironmentFileContent +="${key}=${getNewVersion()}\n"
                                 }
-                            }else if(key=="APP2_VERSION"){
+                            }else if(key=="APP1_VERSION"){
                                 newEnvironmentFileContent +="${key}=${value}\n"
                             }else if(key=="APP3_VERSION"){ 
                                 newEnvironmentFileContent +="${key}=${value}"
