@@ -14,6 +14,10 @@ app.get('/hi', function(req, res){
 	res.send("Say hi from app2");
 });
 
+app.get('/user', function(req, res){
+	res.send("Fetch user data");
+});
+
 app.listen(8080,function(){
 	console.log('app is running in port 8080');
 });
